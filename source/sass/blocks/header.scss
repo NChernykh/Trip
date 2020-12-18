@@ -5,11 +5,20 @@
   height: 100px;
 
   @media (max-width: $tablet-width) {
-    position: absolute;
+    z-index: 5;
     width: 100%;
+    height: 50px;
     background-color: $white;
     flex-direction: column;
+
+    &--opened {
+    position: absolute;
     height: 100vh;
+    }
+
+    &--opened .header__logo {
+      display: none;
+    }
   }
 }
 
@@ -17,6 +26,8 @@
   flex: 1;
 
   @media (max-width: $tablet-width) {
-    display: none;
+    margin-top: 10px;
+    margin-left: 21px;
+    margin-right: auto;
   }
 }
