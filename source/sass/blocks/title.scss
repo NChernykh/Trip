@@ -1,0 +1,17 @@
+.title {
+  position: relative;
+  margin: 0;
+  font-weight: 600;
+  font-size: 55px;
+  line-height: 80px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -30px;
+    left: 0;
+    width: 228px;
+    height: 4px;
+    background-color: $maincolor;
+  }
+}

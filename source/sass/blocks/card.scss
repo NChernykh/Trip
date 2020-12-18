@@ -1,0 +1,9 @@
+.card {
+  flex: 0 1 350px;
+  margin-right: 60px;
+  margin-bottom: 100px;
+}
+
+.card:nth-child(3n) {
+  margin-right: 0;
+}

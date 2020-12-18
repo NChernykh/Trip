@@ -1,0 +1,56 @@
+.intro {
+  background-image: url("../img/intro-desktop@1x.jpg");
+  background-color: #507da1;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/intro-desktop@2x.jpg");
+    background-size: 3840px auto;
+  }
+}
+
+.intro__content {
+  width: 400px;
+  margin-left: auto;
+  margin-right: 50px;
+  padding-top: 176px;
+  padding-bottom: 300px;
+}
+
+.intro__title {
+  margin: 0;
+  margin-bottom: 30px;
+  font-weight: 600;
+  font-size: 55px;
+  line-height: 80px;
+  color: $white;
+}
+
+.intro__text {
+  width: 340px;
+  margin: 0;
+  margin-bottom: 40px;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 170%;
+  color: $white;
+}
+
+.intro__link {
+  position: relative;
+  width: 340px;
+  height: 75px;
+  padding: 30px 40px;
+  text-align: left;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    right: 40px;
+    top: 30px;
+    background-image: url("../img/arrow.svg");
+  }
+}
