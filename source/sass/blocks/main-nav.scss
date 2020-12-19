@@ -17,10 +17,14 @@
   height: 1px;
   background-color: #dadada;
   box-shadow: 0 5px 0 0 #dadada, 0 10px 0 0 #dadada;
+
+  @media (max-width: $mobile-width) {
+    left: 11px;
+  }
 }
 
 @media (max-width: $tablet-width) {
-  .main-nav--closed .main-nav__item {
+  .main-nav--closed .main-nav__list {
     display: none;
   }
 
@@ -35,7 +39,7 @@
 
 .main-nav--opened .main-nav__toggle {
   top: 15px;
-  right: 10px;
+  right: -20px;
   height: 23px;
   background-color: transparent;
 
@@ -95,7 +99,7 @@
       width: 16px;
       height: 16px;
       top: 22px;
-      right: 60px;
+      right: 20px;
       background: url("../img/arrow-down.svg") no-repeat;
       }
     }

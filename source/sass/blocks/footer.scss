@@ -1,0 +1,26 @@
+.footer {
+  margin-bottom: 75px;
+}
+
+.footer__container {
+  display: flex;
+  flex-direction: row;
+}
+
+.footer__block {
+  position: relative;
+  flex: 1 1 390px;
+  border-right: 1px solid #d7d9df;
+}
+
+.footer__block:last-child {
+  border: none;
+}
+
+.footer__block-title {
+  margin: 0;
+  margin-bottom: 20px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 32px;
+}
