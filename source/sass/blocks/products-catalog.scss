@@ -32,14 +32,20 @@
 .products-catalog__title {
   margin-bottom: 64px;
 
+  &::after {
+    bottom: -30px;
+    width: 228px;
+    height: 4px;
+  }
+
   @media (max-width: $tablet-width) {
     margin-bottom: 20px;
-   }
+  }
 }
 
 .products-catalog__info {
   margin: 0;
-  margin-bottom:56px;
+  margin-bottom: 56px;
   font-weight: normal;
   font-size: 16px;
   line-height: 28px;

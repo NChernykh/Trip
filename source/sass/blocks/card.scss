@@ -4,7 +4,7 @@
   margin-right: 60px;
   margin-bottom: 100px;
 
-  &:after {
+  &::after {
     display: none;
     content: "";
     position: absolute;
@@ -38,14 +38,16 @@
 }
 
 @media (min-width: 1170px) {
-  .card:nth-child(3n) {
-  margin-right: 0;
+  .card:nth-child(3n),
+  .card:last-child {
+    margin-right: 0;
   }
 }
 
 @media (max-width: 1169px) {
-  .card:nth-child(2n) {
-  margin-right: 0;
+  .card:nth-child(2n),
+  .card:last-child {
+    margin-right: 0;
   }
 }
 

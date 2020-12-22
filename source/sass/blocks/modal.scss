@@ -1,0 +1,44 @@
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 5;
+  margin: auto;
+  width: 728px;
+
+  @media (max-width: $mobile-width) {
+    width: 100%;
+  }
+}
+
+.modal__close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 18px;
+  height: 17px;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 20px;
+    height: 2px;
+    background-color: fade-out($darkgrey, 0.8);
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}

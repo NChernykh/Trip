@@ -1,0 +1,55 @@
+.order {
+  display: none;
+  top: 50%;
+  transform: translateY(-50%);
+  bottom: auto;
+  background-image: url("../img/order-bg@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: left top;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/order-bg@2x.jpg");
+    background-size: 676px auto;
+  }
+
+  @media (max-width: $mobile-width) {
+    background: none;
+  }
+}
+
+.order__show {
+  display: block;
+}
+
+.order__container {
+  margin-left: auto;
+  padding: 72px 60px 89px 60px;
+  width: 390px;
+  background-color: #fbf8f8;
+  text-align: center;
+
+  @media (max-width: $mobile-width) {
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    padding: 0 16px;
+    padding-top: 100px;
+  }
+}
+
+.order__title {
+  margin: 0;
+  margin-bottom: 50px;
+}
+
+.order__item {
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.order__button {
+  margin: 0 auto;
+  padding: 18px 0;
+  width: 176px;
+  border: none;
+}

@@ -32,7 +32,10 @@
             </a>
           </li>
           <li class="main-nav__item main-nav__item--phone">
-            <a class="main-nav__link " href="tel:+749978468446" aria-label="Номер телефона">
+            <a class="main-nav__link" href="tel:+749978468446" aria-label="Номер телефона">
+              <svg class="main-nav__link-icon" width="17" height="24">
+                <use xlink:href="img/sprite_auto.svg#icon-phone"></use>
+              </svg>
               +7 (499)-784-684-46
             </a>
           </li>
@@ -47,7 +50,7 @@
         <div class="intro__content">
         <h2 class="intro__title">Путешествие по Европе</h2>
         <p class="intro__text">В этом туре вы откроете для себя Европу в новом свете. Вас ждет: море, горы, а также потрясающая красота природы.</p>
-        <a href="" class="btn intro__link">Смотреть тур</a>
+        <a class="btn intro__link" href="#product-list">Смотреть тур</a>
       </div>
       </div>
     </section>
@@ -113,9 +116,9 @@
     </section>
     <section class="products">
       <div class="container">
-        <ul class="products__list">
+        <ul class="products__list" id="product-list">
           <li class="products__item">
-            <a href="" class="products__link">Греция</a>
+            <a href="" class="products__link products__link--current">Греция</a>
           </li>
           <li class="products__item">
             <a href="" class="products__link">Албания</a>
@@ -130,88 +133,248 @@
             <a href="" class="products__link">Хорватия</a>
           </li>
         </ul>
-        <article class="product">
+        <article class="product  product--current">
           <div class="product__content">
-            <h2 class="product__title">Греция</h2>
+            <h2 class="title product__title">Греция</h2>
             <p class="product__text">
               На севере Греции находится один из крупнейших комплексов монастырей, расположенных на вершинах скал. Название его «Метеора» буквально переводится как «висящие в воздухе». Этот монастырь основная цель нашего путешествия в Греции. После покарения скал из песчанника и обломочной горной породы, достигающих в высоту 600 метров, наградой будет неописуемая красота природы и атмосфера, царящая в монастырях Метеоры.
             </p>
-            <a class="btn product__button" href="#">Купить тур сейчас</a>
-            <img class="product__img" src="img/ic-1.jpg" alt="Метеоры" width="430" height="596">
+            <a class="btn product__button js-modal" href="#">Купить тур сейчас</a>
           </div>
+          <picture>
+            <source type="image/webp" media="(max-width: 767px)" srcset="img/product-1-mobile@1x.webp, img/product-1-mobile@2x.webp 2x">
+            <source type="image/webp" media="(max-width: 1023px)" srcset="img/product-1-tablet@1x.webp, img/product-1-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/product-1-desktop@1x.webp, img/product-1-desktop@2x.webp 2x">
+            <source media="(max-width: 767px)" srcset="img/product-1-mobile@1x.jpg, img/product-1-mobile@2x.jpg 2x">
+            <source media="(max-width: 1023px)" srcset="img/product-1-tablet@1x.jpg, img/product-1-tablet@2x.jpg 2x">
+            <img class="product__img" src="img/product-1-desktop@1x.jpg" srcset="img/product-1-desktop@2x.jpg 2x" alt="Метеоры" width="430" height="596">
+          </picture>
           <div class="review">
-            <h3 class="title review__title"></h3>
+            <h3 class="title review__title">Отзывы</h3>
             <blockquote class="review__item">
               <p class="review__text">
                 Метеоры в Греции можно сравнить разве что с Монсерратт в Испании. Такие же высоченные скалы. Но здесь потрясает масштаб. Огромная территория, высоко в горах. Ощущение такое, как будто стоишь на краю света!
               </p>
-              <cite class="review__author-name">Влада Голицына</cite>
+              <cite class="review__author-name review__author-name--1">Влада Голицына</cite>
+            </blockquote>
+          </div>
+        </article>
+        <article class="product">
+          <div class="product__content">
+            <h2 class="title product__title">Албания</h2>
+            <p class="product__text">
+              В Албании мы посетим Курорт Ксамиль. Этот курорт поразит вас чистейшей водой и удивительным пляжем. Вначале кажется, что на пляже вас встречает обычный, правда невероятно белоснежный и слишком крупный песок. Однако, присмотревшись, можно понять, что это не песок, а камни, перетёртые до такого мелкого состояния.
+            </p>
+            <a class="btn product__button js-modal" href="#">Купить тур сейчас</a>
+          </div>
+          <picture>
+            <source type="image/webp" media="(max-width: 767px)" srcset="img/product-2-mobile@1x.webp, img/product-2-mobile@2x.webp 2x">
+            <source type="image/webp" media="(max-width: 1023px)" srcset="img/product-2-tablet@1x.webp, img/product-2-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/product-2-desktop@1x.webp, img/product-2-desktop@2x.webp 2x">
+            <source media="(max-width: 767px)" srcset="img/product-2-mobile@1x.jpg, img/product-2-mobile@2x.jpg 2x">
+            <source media="(max-width: 1023px)" srcset="img/product-2-tablet@1x.jpg, img/product-2-tablet@2x.jpg 2x">
+            <img class="product__img" src="img/product-2-desktop@1x.jpg" srcset="img/product-2-desktop@2x.jpg 2x" alt="Пляж курорта Ксамиль" width="430" height="596">
+          </picture>
+          <div class="review">
+            <h3 class="title review__title">Отзывы</h3>
+            <blockquote class="review__item">
+              <p class="review__text">
+                Замечательный курорт, обязательно стоит посетить. В следующий раз возьму с собой сестру, чтобы тоже смогла вкусить все красоты природы :)
+              </p>
+              <cite class="review__author-name review__author-name--2">Маришка</cite>
+            </blockquote>
+          </div>
+        </article>
+        <article class="product">
+          <div class="product__content">
+            <h2 class="title product__title">Македония</h2>
+            <p class="product__text">
+              В Македонии нашей целью будет посетить Палаошник, который расположился в удивительно красивой лесистой местности возле Охридского озера и Самуиловой твердыни. А также мы заберемся на вершину горы Татичев Камен где находится  археологический памятник Кокино в длину около 100 метров.
+            </p>
+            <a class="btn product__button js-modal" href="#">Купить тур сейчас</a>
+          </div>
+          <picture>
+            <source type="image/webp" media="(max-width: 767px)" srcset="img/product-3-mobile@1x.webp, img/product-3-mobile@2x.webp 2x">
+            <source type="image/webp" media="(max-width: 1023px)" srcset="img/product-3-tablet@1x.webp, img/product-3-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/product-3-desktop@1x.webp, img/product-3-desktop@2x.webp 2x">
+            <source media="(max-width: 767px)" srcset="img/product-3-mobile@1x.jpg, img/product-3-mobile@2x.jpg 2x">
+            <source media="(max-width: 1023px)" srcset="img/product-3-tablet@1x.jpg, img/product-3-tablet@2x.jpg 2x">
+            <img class="product__img" src="img/product-3-desktop@1x.jpg" srcset="img/product-3-desktop@2x.jpg 2x" alt="Храм Иоанна Канео" width="430" height="596">
+          </picture>
+          <div class="review">
+            <h3 class="title review__title">Отзывы</h3>
+            <blockquote class="review__item">
+              <p class="review__text">
+                Я бы сказал необычное старое здание. В архитектуре я не разбираюсь, но подъем в гору был очень веселым так как люди оказались легкими и заводными. Красота природы впечатлила, особенно после долгого пути в гору.
+              </p>
+              <cite class="review__author-name review__author-name--3">Михаил Кузьмин</cite>
+            </blockquote>
+          </div>
+        </article>
+        <article class="product">
+          <div class="product__content">
+            <h2 class="title product__title">Черногория</h2>
+            <p class="product__text">
+              Черногория удивит нас самым большим в Европе каньоном реки Тара, который в некоторых местах высотой берегов доходит до 1300 метров, а шириной не превышает трех. При этом длина каньона составляет 80 км.
+            </p>
+            <a class="btn product__button js-modal" href="#">Купить тур сейчас</a>
+          </div>
+          <picture>
+            <source type="image/webp" media="(max-width: 767px)" srcset="img/product-4-mobile@1x.webp, img/product-4-mobile@2x.webp 2x">
+            <source type="image/webp" media="(max-width: 1023px)" srcset="img/product-4-tablet@1x.webp, img/product-4-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/product-4-desktop@1x.webp, img/product-4-desktop@2x.webp 2x">
+            <source media="(max-width: 767px)" srcset="img/product-4-mobile@1x.jpg, img/product-4-mobile@2x.jpg 2x">
+            <source media="(max-width: 1023px)" srcset="img/product-4-tablet@1x.jpg, img/product-4-tablet@2x.jpg 2x">
+            <img class="product__img" src="img/product-4-desktop@1x.jpg" srcset="img/product-4-desktop@2x.jpg 2x" alt="Каньон реки Тара" width="430" height="596">
+          </picture>
+          <div class="review">
+            <h3 class="title review__title">Отзывы</h3>
+            <blockquote class="review__item">
+              <p class="review__text">
+                Неописуемой красоты каньон! Ничего прекраснее в жизни не видела, разве что в фильмах :) Всем советую
+              </p>
+              <cite class="review__author-name review__author-name--4">Анастасия Мей</cite>
+            </blockquote>
+          </div>
+        </article>
+        <article class="product">
+          <div class="product__content">
+            <h2 class="title product__title">Хорватия</h2>
+            <p class="product__text">
+              В Хорватии мы посетим необычайную пещеру названную Бередине. Ее подземный мир увлечет вас на 80-ти метровую глубину через 5 освещенных залов, украшенных удивительными нерукотворными скульптурами —  сталактитами и сталагмитами —  формировавшимися тысячи и тысячи лет.
+            </p>
+            <a class="btn product__button js-modal" href="#">Купить тур сейчас</a>
+          </div>
+          <picture>
+            <source type="image/webp" media="(max-width: 767px)" srcset="img/product-5-mobile@1x.webp, img/product-5-mobile@2x.webp 2x">
+            <source type="image/webp" media="(max-width: 1023px)" srcset="img/product-5-tablet@1x.webp, img/product-5-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/product-5-desktop@1x.webp, img/product-5-desktop@2x.webp 2x">
+            <source media="(max-width: 767px)" srcset="img/product-5-mobile@1x.jpg, img/product-5-mobile@2x.jpg 2x">
+            <source media="(max-width: 1023px)" srcset="img/product-5-tablet@1x.jpg, img/product-5-tablet@2x.jpg 2x">
+            <img class="product__img" src="img/product-5-desktop@1x.jpg" srcset="img/product-5-desktop@2x.jpg 2x" alt="Каньон реки Тара" width="430" height="596">
+          </picture>
+          <div class="review">
+            <h3 class="title review__title">Отзывы</h3>
+            <blockquote class="review__item">
+              <p class="review__text">
+                Мы поехали всей семьей, я, моя жена и родители. Пещера просто незабываема! А то, что все это формировалось тысячелетиями, мега необычно. Первоначально даже не верилось, но натур ни с чем не спутать по итогу :)
+              </p>
+              <cite class="review__author-name review__author-name--5">Владимир Мулицын</cite>
             </blockquote>
           </div>
         </article>
       </div>
-    </section>
-    <section class="price">
-      <div class="container price__container">
-        <article class="price__info">
-          <h2 class="title price__title">Цены</h2>
-          <p class="price__text">
-            Специально для Вас  мы разработали 2 пакета цен с разными условиями, отталкиваясь от Ваших потребностей и возможностей. Выберите для себя лучший вариант отпуска и отдохните на все 100%!
-          </p>
-          <b class="price__contact">Свяжитесь с нами</b>
-          <a class="price__phone" href="tel:+749978468446" aria-label="Номер телефона">
-            +7 (499)-784-684-46
-          </a>
-        </article>
-        <article class="package">
-          <div class="package__header">
-            <h3 class="package__title">Комплексный</h3>
-            <p class="package__cost">$1999</p>
-          </div>
-          <p class="package__text">Ознакомьтесь с перечнем того, что входит в данный пакет </p>
-          <ul class="package__list">
-            <li class="package__item">Разработанный маршрут с гидом группы</li>
-            <li class="package__item">Перелет, трансфер и проживание в отелях</li>
-            <li class="package__item">Завтраки, ужины в отелях и ланчи на природе</li>
-            <li class="package__item">Экскурсии по удивительно красивым местам Европы</li>
-          </ul>
-          <button class="btn package__button">Купить тур сейчас</button>
-        </article>
-        <article class="package">
-          <div class="package__header">
-            <h3 class="package__title">Экономный</h3>
-            <p class="package__cost">$1399</p>
-          </div>
-          <p class="package__text">Ознакомьтесь с перечнем того, что входит в данный пакет </p>
-          <ul class="package__list">
-            <li class="package__item">Разработанный маршрут с гидом группы</li>
-            <li class="package__item">Перелет и трансфер</li>
-            <li class="package__item">Проживание в хостелах при отелях</li>
-            <li class="package__item">Экскурсии по удивительно красивым местам Европы</li>
-          </ul>
-          <button class="btn package__button">Купить тур сейчас</button>
-        </article>
+      <div class="price">
+        <div class="container price__container">
+          <article class="price__info" id="price">
+            <h2 class="title price__title">Цены</h2>
+            <p class="price__text">
+              Специально для Вас  мы разработали 2 пакета цен с разными условиями, отталкиваясь от Ваших потребностей и возможностей. Выберите для себя лучший вариант отпуска и отдохните на все 100%!
+            </p>
+            <p class="price__contact">Свяжитесь с нами</p>
+            <a class="price__phone" href="tel:+749978468446" aria-label="Номер телефона">
+              <svg class="price__phone-icon" width="25" height="25">
+                <use xlink:href="img/sprite_auto.svg#icon-phone"></use>
+              </svg>
+              +7 (499)-784-684-46
+            </a>
+          </article>
+          <article class="package">
+            <div class="package__header">
+              <h3 class="package__title">Комплексный</h3>
+              <p class="package__cost">$1999</p>
+            </div>
+            <p class="package__text">Ознакомьтесь с перечнем того, что входит в данный пакет </p>
+            <ul class="package__list">
+              <li class="package__item">
+                <svg class="package__icon" width="14" height="12">
+                  <use xlink:href="img/sprite_auto.svg#icon-mark"></use>
+                </svg>
+                Разработанный маршрут с гидом группы
+              </li>
+              <li class="package__item">
+                <svg class="package__icon" width="14" height="12">
+                  <use xlink:href="img/sprite_auto.svg#icon-mark"></use>
+                </svg>
+                Перелет, трансфер и проживание в отелях
+              </li>
+              <li class="package__item">
+                <svg class="package__icon" width="14" height="12">
+                  <use xlink:href="img/sprite_auto.svg#icon-mark"></use>
+                </svg>
+                Завтраки, ужины в отелях и ланчи на природе
+              </li>
+              <li class="package__item">
+                <svg class="package__icon" width="14" height="12">
+                  <use xlink:href="img/sprite_auto.svg#icon-mark"></use>
+                </svg>
+                Экскурсии по удивительно красивым местам Европы
+              </li>
+            </ul>
+            <a class="btn package__button js-modal">Купить тур сейчас</a>
+          </article>
+          <article class="package">
+            <div class="package__header">
+              <h3 class="package__title">Экономный</h3>
+              <p class="package__cost">$1399</p>
+            </div>
+            <p class="package__text">Ознакомьтесь с перечнем того, что входит в данный пакет </p>
+            <ul class="package__list">
+              <li class="package__item">
+                <svg class="package__icon" width="14" height="12">
+                  <use xlink:href="img/sprite_auto.svg#icon-mark"></use>
+                </svg>
+                Разработанный маршрут с гидом группы
+              </li>
+              <li class="package__item">
+                <svg class="package__icon" width="14" height="12">
+                  <use xlink:href="img/sprite_auto.svg#icon-mark"></use>
+                </svg>
+                Перелет и трансфер
+              </li>
+              <li class="package__item">
+                <svg class="package__icon" width="14" height="12">
+                  <use xlink:href="img/sprite_auto.svg#icon-mark"></use>
+                </svg>
+                Проживание в хостелах при отелях
+              </li>
+              <li class="package__item">
+                <svg class="package__icon" width="14" height="12">
+                  <use xlink:href="img/sprite_auto.svg#icon-mark"></use>
+                </svg>
+                Только завтраки в отелях
+              </li>
+              <li class="package__item">
+                <svg class="package__icon" width="14" height="12">
+                  <use xlink:href="img/sprite_auto.svg#icon-mark"></use>
+                </svg>
+                Экскурсии по удивительно красивым местам Европы
+              </li>
+            </ul>
+            <a class="btn package__button js-modal">Купить тур сейчас</a>
+          </article>
+        </div>
       </div>
     </section>
     <section class="feedback">
       <h2 class="visually-hidden">Обратная связь</h2>
       <div class="container feedback__container">
         <form class="form"action="https://echo.htmlacademy.ru" method="post">
-          <h3 class="form__title"></h3>
-          <p class="form__text"></p>
-          <p class="form__item">
-            <label for="" class="field-text" aria-label="Введите номер телефона">
-              <input class="field-text__input" type="tel" name="user_tel" placeholder="Введите 10 цифр номера" required>
-            </label>
-          </p>
-          <p class="form__item">
-            <label for="" class="field-text" aria-label="Введите email">
-              <input class="field-text__input" type="email" name="user_mail" placeholder="E-mail">
-            </label>
-          </p>
-          <p class="form__button-box">
-            <button class="btn form__button" type="submit">Отправить</button>
-          </p>
+          <h3 class="form__title">У Вас остались вопросы?</h3>
+          <p class="form__text">Оставьте свой номер или e-mail и мы свяжемся с Вами</p>
+          <div class="form__block field">
+            <p class="form__item field__phone">
+              <label class="field__text" aria-label="Введите номер телефона">
+                <input class="field__input" type="tel" name="user_tel" placeholder="+7 Введите 10 цифр номера" required>
+              </label>
+            </p>
+            <p class="form__item">
+              <label class="field__text" aria-label="Введите email">
+                <input class="field__input" type="email" name="user_mail" placeholder="E-mail">
+              </label>
+            </p>
+          </div>
+          <button class="btn form__button js-button" type="submit">Отправить</button>
         </form>
       </div>
     </section>
@@ -246,16 +409,56 @@
       </div>
       <div class="footer__block contacts">
         <h2 class="footer__block-title">Наши контакты</h2>
-        <a class="contacts__item" href="mailto:puteshestviemechta@gmail.ru" aria-label="Написать письмо">puteshestviemechta@gmail.ru</a>
-        <a class="contacts__item" href="tel:+749978468446" aria-label="Позонить">+7 (499) -784-684-46</a>
+        <a class="contacts__item contacts__item--tablet" href="mailto:puteshestviemechta@gmail.ru" aria-label="Написать письмо">
+          <svg class="contacts__icon  contacts__icon--mail" width="26" height="20">
+            <use xlink:href="img/sprite_auto.svg#icon-mail"></use>
+          </svg>
+          Почта
+        </a>
+        <a class="contacts__item contacts__item--desktop" href="mailto:puteshestviemechta@gmail.ru" aria-label="Написать письмо">
+          <svg class="contacts__icon" width="26" height="20">
+            <use xlink:href="img/sprite_auto.svg#icon-mail"></use>
+          </svg>
+          puteshestviemechta@gmail.ru
+        </a>
+        <a class="contacts__item" href="tel:+749978468446" aria-label="Позонить">
+          <svg class="contacts__icon contacts__icon--phone" width="30" height="30">
+            <use xlink:href="img/sprite_auto.svg#icon-phone"></use>
+          </svg>
+          +7 (499) -784-684-46
+        </a>
       </div>
       <div class="footer__block offer">
-        <h2 class="footer__block-title">Корпоративные путешествия</h2>
+        <h2 class="footer__block-title offer__title">Корпоративные путешествия</h2>
         <p class="offer__text">Также вы можете заказать индивидуальное путешествие под вашу компанию.<br> Подобные туры очень сближают<br> компанию, помогают поддерживать корпоративный дух, а также являются оличным времяпрепровождением
         </p>
       </div>
     </div>
   </footer>
+  <div class="modal-overlay"></div>
+    <section class="modal order">
+      <form class="order__container">
+        <h2 class="order__title">Купить тур</h2>
+        <div class="order__block field">
+          <p class="order__item field__phone">
+            <label for="" class="field__text" aria-label="Введите номер телефона">
+              <input class="field__input" type="tel" name="user_tel" placeholder="+7 Введите 10 цифр номера" required>
+            </label>
+          </p>
+          <p class="order__item">
+            <label for="" class="field__text" aria-label="Введите email">
+              <input class="field__input" type="email" name="user_mail" placeholder="E-mail">
+            </label>
+          </p>
+        </div>
+        <button class="btn order__button js-button" type="submit">Отправить</button>
+      </form>
+      <button class="modal__close" type="button" aria-label="Закрыть"></button>
+    </section>
+    <section class="modal success">
+      <p class="success__text">Форма успешно отправлена, спасибо! :)</p>
+      <button class="modal__close" type="button" aria-label="Закрыть"></button>
+    </section>
   <script src="js/script.js"></script>
 </body>
 </html>

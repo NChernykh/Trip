@@ -90,10 +90,10 @@
     position: relative;
     width: 100%;
     padding: 17px;
-    background-color:#fBf8f8;
+    background-color: #fbf8f8;
     margin-bottom: 30px;
 
-    &:after {
+    &::after {
       position: absolute;
       content: "";
       width: 16px;
@@ -101,21 +101,22 @@
       top: 22px;
       right: 20px;
       background: url("../img/arrow-down.svg") no-repeat;
-      }
     }
   }
+}
 
-  .main-nav__item:hover .main-nav__link {
-    color: $maincolor;
-  }
+.main-nav__item:hover .main-nav__link {
+  color: $maincolor;
+}
 
-  .main-nav__item:not(:last-child) {
+.main-nav__item:not(:last-child) {
   @media (min-width: $desktop-width-only) {
     margin-right: 40px;
   }
 }
 
 .main-nav__item--phone {
+  position: relative;
   padding-left: 40px;
 
   @media (max-width: $tablet-width) {
@@ -132,6 +133,10 @@
     color: $maincolor;
   }
 
+  &:hover .main-nav__link-icon {
+    stroke: $maincolor;
+  }
+
   @media (max-width: $tablet-width) {
     font-weight: 600;
     font-size: 20px;
@@ -140,4 +145,10 @@
   }
 }
 
-
+.main-nav__link-icon {
+  position: absolute;
+  top: 0;
+  left: 5px;
+  fill: none;
+  stroke: $darkgrey;
+}

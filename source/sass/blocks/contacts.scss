@@ -2,12 +2,57 @@
   padding-left: 90px;
   display: flex;
   flex-direction: column;
+
+  @media (max-width: $tablet-width) {
+    padding-left: 50px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-left: 0;
+    text-align: center;
+  }
 }
 
 .contacts__item {
+  padding-left: 15px;
   margin-bottom: 20px;
-  padding-left: 40px;
   font-size: 14px;
   line-height: 17px;
   color: $maincolor;
+
+  @media (max-width: $mobile-width) {
+    padding-left: 0;
+  }
+
+  &:hover,
+  &:focus {
+    color: fade-out($darkgrey, 0.5);
+  }
+
+  &:hover .contacts__icon,
+  &:focus .contacts__icon {
+    stroke: fade-out($darkgrey, 0.3);
+  }
+
+  &--tablet {
+    display: none;
+
+    @media (max-width: 1080px) {
+      display: block;
+    }
+  }
+
+  &--desktop {
+    @media (max-width: 1080px) {
+      display: none;
+    }
+  }
+}
+
+.contacts__icon {
+  position: relative;
+  top: 6px;
+  left: -16px;
+  stroke: #d7d9df;
+  fill: none;
 }

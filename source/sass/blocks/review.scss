@@ -1,0 +1,128 @@
+.review {
+  padding: 30px;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 356px;
+  background-color: $white;
+  transform:translate(0, -50%);
+
+  @media (max-width: $tablet-width) {
+    top: auto;
+    bottom: -20px;
+    left:50%;
+    right: auto;
+    transform:translate(-50%, 0);
+  }
+
+  @media (max-width: $mobile-width) {
+    padding: 28px;
+    width: 268px;
+    bottom: -40px;
+    text-align: center;
+  }
+}
+
+.review__title {
+  margin-bottom: 32px;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 37px;
+
+  @media (max-width: $mobile-width) {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  &::after {
+    bottom: -11px;
+    width: 68px;
+    height: 1px;
+
+    @media (max-width: $tablet-width) {
+      content: "";
+    }
+
+    @media (max-width: $mobile-width) {
+      left: 70px;
+    }
+  }
+}
+
+.review__item {
+  margin: 0;
+}
+
+.review__text {
+  margin: 0;
+  margin-bottom: 32px;
+  font-size: 14px;
+  color: fade-out($lightgrey, 0.3);
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 68px;
+  }
+}
+
+.review__author-name {
+  padding: 10px;
+  padding-left: 55px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: $lightgrey;
+  background-repeat: no-repeat;
+
+  @media (max-width: $mobile-width) {
+    margin: 0 auto;
+    padding-left: 0;
+    padding-top: 45px;
+    background-position: center 0;
+  }
+
+  &--1 {
+    background-image: url("../img/avatar-1@1x.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/avatar-1@2x.png");
+      background-size: 75px auto;
+    }
+  }
+
+  &--2 {
+    background-image: url("../img/avatar-2@1x.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/avatar-2@2x.png");
+      background-size: 75px auto;
+    }
+  }
+
+  &--3 {
+    background-image: url("../img/avatar-3@1x.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/avatar-3@2x.png");
+      background-size: 75px auto;
+    }
+  }
+
+  &--4 {
+    background-image: url("../img/avatar-4@1x.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/avatar-4@2x.png");
+      background-size: 75px auto;
+    }
+  }
+
+  &--5 {
+    background-image: url("../img/avatar-5@1x.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/avatar-5@2x.png");
+      background-size: 75px auto;
+    }
+  }
+}
