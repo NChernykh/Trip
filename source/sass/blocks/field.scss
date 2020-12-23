@@ -21,4 +21,12 @@
   font-family: inherit;
   color: $darkgrey;
   border: 1px solid fade-out($lightgrey, 0.7);
+
+  &:hover {
+    border: 1px solid fade-out($lightgrey, 0.5);
+  }
+
+  &--valid {
+    border: 1px solid #FE7865;
+  }
 }

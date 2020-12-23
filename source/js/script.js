@@ -50,7 +50,6 @@ for (var modalClose of modalCloses) {
   });
 }
 
-
 window.addEventListener('keydown', function (evt) {
   if (evt.key === 'Escape') {
     if (order.classList.contains('order__show')) {
