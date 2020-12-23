@@ -2,10 +2,16 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  height: 100px;
+  height: 95px;
+  margin-top: 5px;
 
   @media (max-width: $tablet-width) {
+    &--nojs {
+      height: auto;
+    }
+
     z-index: 5;
+    margin-top: 0;
     width: 100%;
     height: 50px;
     background-color: $white;
@@ -28,8 +34,13 @@
   @media (max-width: $tablet-width) {
     width: 44px;
     height: 17px;
-    margin-top: 15px;
+    margin-top: 18px;
     margin-left: 21px;
     margin-right: auto;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-top: 18px;
+    margin-left: 17px;
   }
 }

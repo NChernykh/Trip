@@ -6,6 +6,7 @@ const mainNav = document.querySelector('.main-nav');
 
 mainNav.classList.remove('main-nav--nojs');
 mainNav.classList.remove('main-nav--opened');
+header.classList.remove('header__container--nojs');
 mainNav.classList.add('main-nav--closed');
 
 navToggle.addEventListener('click', function () {
@@ -36,6 +37,7 @@ for(var button of buttons) {
     evt.preventDefault();
     order.classList.remove("order__show");
     success.classList.add("success__show");
+    overlay.style.display = "block";
   });
 }
 

@@ -1,21 +1,47 @@
 <!DOCTYPE html>
 <html class="page" lang="ru">
 <head>
+  <!-- Pixel Glass -->
+<style>
+  HTML {
+    background-repeat: no-repeat;
+    background-position:  50% 0;
+    /* Mobile layout by default */
+    background-image: url( "img/mobile.jpg");
+  }
+  /* Tablet */
+  @media ( min-width: 768px ) {
+    HTML {
+      /* Tablet layout */
+      background-image: url( "img/tablet.jpg");
+    }
+  }
+  /* Desktop */
+  @media ( min-width: 1024px ) {
+    HTML {
+      /* Desktop layout */
+      background-image: url( "img/desktop.jpg");
+    }
+  }
+</style>
+<link href="../node_modules/pixel-glass/styles.css" rel="stylesheet">
+<script src="../node_modules/pixel-glass/script.js"></script>
+<!-- // Pixel Glass -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Eurotrip</title>
   <link rel="stylesheet" href="css/style.min.css">
-  <link rel="preload" href="fonts/montserrat.woff2" as="font">
-  <link rel="preload" href="fonts/montserrat500.woff2" as="font">
-  <link rel="preload" href="fonts/montserrat600.woff2" as="font">
-  <link rel="preload" href="fonts/montserrat700.woff2" as="font">
+  <link rel="preload" href="fonts/montserrat-regular.woff2" as="font">
+  <link rel="preload" href="fonts/montserrat-500.woff2" as="font">
+  <link rel="preload" href="fonts/montserrat-600.woff2" as="font">
+  <link rel="preload" href="fonts/montserrat-700.woff2" as="font">
 </head>
 <body class="page__body">
   <header class="header">
-    <div class="container header__container">
+    <div class="container header__container header__container--nojs">
       <a class="header__logo">
-        <img src="img/logo.svg" width="58" height="22" alt="Логотип Eurotrip">
+        <img src="img/logo.svg" width="57" height="22" alt="Логотип Eurotrip">
       </a>
       <nav class="main-nav  main-nav--opened main-nav--nojs">
         <button class="nav-toggle main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span>
@@ -32,11 +58,11 @@
             </a>
           </li>
           <li class="main-nav__item main-nav__item--phone">
-            <a class="main-nav__link" href="tel:+749978468446" aria-label="Номер телефона">
-              <svg class="main-nav__link-icon" width="17" height="24">
+            <a class="main-nav__link main-nav__link--phone" href="tel:+749978468446" aria-label="Номер телефона">
+              <svg class="main-nav__link-icon" width="30" height="30">
                 <use xlink:href="img/sprite_auto.svg#icon-phone"></use>
               </svg>
-              +7 (499)-784-684-46
+              +7 (499) -784-684-46
             </a>
           </li>
         </ul>
@@ -118,22 +144,22 @@
       <div class="container">
         <ul class="products__list" id="product-list">
           <li class="products__item">
-            <a href="" class="products__link products__link--current">Греция</a>
+            <a class="products__link products__link--current" href="#product-1">Греция</a>
           </li>
           <li class="products__item">
-            <a href="" class="products__link">Албания</a>
+            <a class="products__link" href="#product-2">Албания</a>
           </li>
           <li class="products__item">
-            <a href="" class="products__link">Македония</a>
+            <a class="products__link" href="#product-3">Македония</a>
           </li>
           <li class="products__item">
-            <a href="" class="products__link">Черногория</a>
+            <a class="products__link" href="#product-4">Черногория</a>
           </li>
           <li class="products__item">
-            <a href="" class="products__link">Хорватия</a>
+            <a class="products__link" href="#product-5">Хорватия</a>
           </li>
         </ul>
-        <article class="product  product--current">
+        <article class="product  product--current" id="product-1">
           <div class="product__content">
             <h2 class="title product__title">Греция</h2>
             <p class="product__text">
@@ -159,7 +185,7 @@
             </blockquote>
           </div>
         </article>
-        <article class="product">
+        <article class="product"  id="product-2">
           <div class="product__content">
             <h2 class="title product__title">Албания</h2>
             <p class="product__text">
@@ -185,7 +211,7 @@
             </blockquote>
           </div>
         </article>
-        <article class="product">
+        <article class="product"  id="product-3">
           <div class="product__content">
             <h2 class="title product__title">Македония</h2>
             <p class="product__text">
@@ -211,7 +237,7 @@
             </blockquote>
           </div>
         </article>
-        <article class="product">
+        <article class="product"  id="product-4">
           <div class="product__content">
             <h2 class="title product__title">Черногория</h2>
             <p class="product__text">
@@ -237,7 +263,7 @@
             </blockquote>
           </div>
         </article>
-        <article class="product">
+        <article class="product"  id="product-5">
           <div class="product__content">
             <h2 class="title product__title">Хорватия</h2>
             <p class="product__text">
@@ -266,20 +292,21 @@
       </div>
       <div class="price">
         <div class="container price__container">
-          <article class="price__info" id="price">
+          <div class="price__info" id="price">
             <h2 class="title price__title">Цены</h2>
             <p class="price__text">
               Специально для Вас  мы разработали 2 пакета цен с разными условиями, отталкиваясь от Ваших потребностей и возможностей. Выберите для себя лучший вариант отпуска и отдохните на все 100%!
             </p>
             <p class="price__contact">Свяжитесь с нами</p>
             <a class="price__phone" href="tel:+749978468446" aria-label="Номер телефона">
-              <svg class="price__phone-icon" width="25" height="25">
+              <svg class="price__phone-icon" width="30" height="30">
                 <use xlink:href="img/sprite_auto.svg#icon-phone"></use>
               </svg>
-              +7 (499)-784-684-46
+              +7 (499) -784-684-46
             </a>
-          </article>
-          <article class="package">
+          </div>
+          <div class="price__block">
+            <article class="package">
             <div class="package__header">
               <h3 class="package__title">Комплексный</h3>
               <p class="package__cost">$1999</p>
@@ -312,47 +339,48 @@
               </li>
             </ul>
             <a class="btn package__button js-modal">Купить тур сейчас</a>
-          </article>
-          <article class="package">
-            <div class="package__header">
-              <h3 class="package__title">Экономный</h3>
-              <p class="package__cost">$1399</p>
-            </div>
-            <p class="package__text">Ознакомьтесь с перечнем того, что входит в данный пакет </p>
-            <ul class="package__list">
-              <li class="package__item">
-                <svg class="package__icon" width="14" height="12">
-                  <use xlink:href="img/sprite_auto.svg#icon-mark"></use>
-                </svg>
-                Разработанный маршрут с гидом группы
-              </li>
-              <li class="package__item">
-                <svg class="package__icon" width="14" height="12">
-                  <use xlink:href="img/sprite_auto.svg#icon-mark"></use>
-                </svg>
-                Перелет и трансфер
-              </li>
-              <li class="package__item">
-                <svg class="package__icon" width="14" height="12">
-                  <use xlink:href="img/sprite_auto.svg#icon-mark"></use>
-                </svg>
-                Проживание в хостелах при отелях
-              </li>
-              <li class="package__item">
-                <svg class="package__icon" width="14" height="12">
-                  <use xlink:href="img/sprite_auto.svg#icon-mark"></use>
-                </svg>
-                Только завтраки в отелях
-              </li>
-              <li class="package__item">
-                <svg class="package__icon" width="14" height="12">
-                  <use xlink:href="img/sprite_auto.svg#icon-mark"></use>
-                </svg>
-                Экскурсии по удивительно красивым местам Европы
-              </li>
-            </ul>
-            <a class="btn package__button js-modal">Купить тур сейчас</a>
-          </article>
+            </article>
+            <article class="package">
+              <div class="package__header">
+                <h3 class="package__title">Экономный</h3>
+                <p class="package__cost">$1399</p>
+              </div>
+              <p class="package__text">Ознакомьтесь с перечнем того, что входит в данный пакет </p>
+              <ul class="package__list">
+                <li class="package__item">
+                  <svg class="package__icon" width="14" height="12">
+                    <use xlink:href="img/sprite_auto.svg#icon-mark"></use>
+                  </svg>
+                  Разработанный маршрут с гидом группы
+                </li>
+                <li class="package__item">
+                  <svg class="package__icon" width="14" height="12">
+                    <use xlink:href="img/sprite_auto.svg#icon-mark"></use>
+                  </svg>
+                  Перелет и трансфер
+                </li>
+                <li class="package__item">
+                  <svg class="package__icon" width="14" height="12">
+                    <use xlink:href="img/sprite_auto.svg#icon-mark"></use>
+                  </svg>
+                  Проживание в хостелах при отелях
+                </li>
+                <li class="package__item">
+                  <svg class="package__icon" width="14" height="12">
+                    <use xlink:href="img/sprite_auto.svg#icon-mark"></use>
+                  </svg>
+                  Только завтраки в отелях
+                </li>
+                <li class="package__item">
+                  <svg class="package__icon" width="14" height="12">
+                    <use xlink:href="img/sprite_auto.svg#icon-mark"></use>
+                  </svg>
+                  Экскурсии по удивительно красивым местам Европы
+                </li>
+              </ul>
+              <a class="btn package__button js-modal">Купить тур сейчас</a>
+            </article>
+          </div>
         </div>
       </div>
     </section>
@@ -365,7 +393,7 @@
           <div class="form__block field">
             <p class="form__item field__phone">
               <label class="field__text" aria-label="Введите номер телефона">
-                <input class="field__input" type="tel" name="user_tel" placeholder="+7 Введите 10 цифр номера" required>
+                <input class="field__input" type="tel" name="user_tel" placeholder="+7  Введите  10 цифр номера" required>
               </label>
             </p>
             <p class="form__item">
@@ -408,7 +436,7 @@
         </div>
       </div>
       <div class="footer__block contacts">
-        <h2 class="footer__block-title">Наши контакты</h2>
+        <h2 class="footer__block-title contacts__title">Наши контакты</h2>
         <a class="contacts__item contacts__item--tablet" href="mailto:puteshestviemechta@gmail.ru" aria-label="Написать письмо">
           <svg class="contacts__icon  contacts__icon--mail" width="26" height="20">
             <use xlink:href="img/sprite_auto.svg#icon-mail"></use>
@@ -421,7 +449,7 @@
           </svg>
           puteshestviemechta@gmail.ru
         </a>
-        <a class="contacts__item" href="tel:+749978468446" aria-label="Позонить">
+        <a class="contacts__item contacts__item--phone" href="tel:+749978468446" aria-label="Позонить">
           <svg class="contacts__icon contacts__icon--phone" width="30" height="30">
             <use xlink:href="img/sprite_auto.svg#icon-phone"></use>
           </svg>
@@ -436,29 +464,29 @@
     </div>
   </footer>
   <div class="modal-overlay"></div>
-    <section class="modal order">
-      <form class="order__container">
-        <h2 class="order__title">Купить тур</h2>
-        <div class="order__block field">
-          <p class="order__item field__phone">
-            <label for="" class="field__text" aria-label="Введите номер телефона">
-              <input class="field__input" type="tel" name="user_tel" placeholder="+7 Введите 10 цифр номера" required>
-            </label>
-          </p>
-          <p class="order__item">
-            <label for="" class="field__text" aria-label="Введите email">
-              <input class="field__input" type="email" name="user_mail" placeholder="E-mail">
-            </label>
-          </p>
-        </div>
-        <button class="btn order__button js-button" type="submit">Отправить</button>
-      </form>
-      <button class="modal__close" type="button" aria-label="Закрыть"></button>
-    </section>
-    <section class="modal success">
-      <p class="success__text">Форма успешно отправлена, спасибо! :)</p>
-      <button class="modal__close" type="button" aria-label="Закрыть"></button>
-    </section>
+  <section class="modal order">
+    <form class="order__container">
+      <h2 class="order__title">Купить тур</h2>
+      <div class="order__block field">
+        <p class="order__item field__phone">
+          <label for="" class="field__text" aria-label="Введите номер телефона">
+            <input class="field__input" type="tel" name="user_tel" placeholder="+7 Введите 10 цифр номера" required>
+          </label>
+        </p>
+        <p class="order__item">
+          <label for="" class="field__text" aria-label="Введите email">
+            <input class="field__input" type="email" name="user_mail" placeholder="E-mail">
+          </label>
+        </p>
+      </div>
+      <button class="btn order__button js-button" type="submit">Отправить</button>
+    </form>
+    <button class="modal__close" type="button" aria-label="Закрыть"></button>
+  </section>
+  <section class="modal success">
+    <p class="success__text">Форма успешно отправлена, спасибо! :)</p>
+    <button class="modal__close" type="button" aria-label="Закрыть"></button>
+  </section>
   <script src="js/script.js"></script>
 </body>
 </html>

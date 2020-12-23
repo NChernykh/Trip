@@ -2,7 +2,7 @@
   position: relative;
   flex: 0 1 350px;
   margin-right: 60px;
-  margin-bottom: 100px;
+  margin-bottom: 94px;
 
   &::after {
     display: none;
@@ -29,18 +29,28 @@
   @media (max-width: $tablet-width) {
     flex: 0 1 288px;
     margin-right: 29px;
-    margin-bottom: 19px;
+    margin-bottom: 12px;
   }
 
   @media (max-width: $mobile-width) {
     margin-right: 0;
+    margin-bottom: 28px;
   }
 }
 
 @media (min-width: 1170px) {
-  .card:nth-child(3n),
+  .card:nth-child(3n) {
+    margin-right: 0;
+  }
+
   .card:last-child {
     margin-right: 0;
+    margin-bottom: 0;
+  }
+
+  .card:nth-child(4n) {
+    margin-right: 120px;
+    margin-bottom: 0;
   }
 }
 
@@ -51,10 +61,22 @@
   }
 }
 
+@media (max-width: $mobile-width) {
+  .card:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.carg__img {
+  width: 100%;
+  height: auto;
+}
+
 .card__title {
   position: absolute;
-  bottom: 9px;
-  left: 67px;
+  bottom: 7px;
+  left: 50%;
+  transform: translate(-50%, 0);
   margin: 0;
   padding-top: 17px;
   width: 215px;
@@ -65,20 +87,17 @@
   text-align: center;
   color: $darkgrey;
   background-color: $white;
-
-  @media (max-width: $tablet-width) {
-    left: 35px;
-  }
 }
 
 .card__button {
   z-index: 6;
   display: none;
   position: absolute;
-  top: 200px;
-  right: 42px;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
   margin: 0;
-  padding: 30px 25px;
+  padding: 20px;
   width: 266px;
   border: 1px solid rgba(255, 255, 255, 0.7);
   font-weight: 500;

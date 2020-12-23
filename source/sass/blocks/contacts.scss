@@ -1,24 +1,36 @@
 .contacts {
-  padding-left: 90px;
   display: flex;
   flex-direction: column;
+  padding-left: 90px;
+  padding-right: 41px;
 
   @media (max-width: $tablet-width) {
     padding-left: 50px;
   }
 
   @media (max-width: $mobile-width) {
-    padding-left: 0;
+    padding: 0;
+    padding-bottom: 5px;
     text-align: center;
   }
 }
 
+.contacts__title {
+  margin-bottom: 15px;
+}
+
 .contacts__item {
-  padding-left: 15px;
-  margin-bottom: 20px;
+  padding-left: 12px;
+  margin-bottom: 10px;
   font-size: 14px;
   line-height: 17px;
   color: $maincolor;
+
+  &--phone {
+    padding-left: 7px;
+    font-size: 16px;
+    line-height: 32px;
+  }
 
   @media (max-width: $mobile-width) {
     padding-left: 0;
@@ -36,9 +48,11 @@
 
   &--tablet {
     display: none;
+    margin: 0;
 
     @media (max-width: 1080px) {
       display: block;
+      margin-bottom: 10px;
     }
   }
 
@@ -52,7 +66,11 @@
 .contacts__icon {
   position: relative;
   top: 6px;
-  left: -16px;
+  left: -13px;
   stroke: #d7d9df;
   fill: none;
+
+  &--phone {
+    left: -8px;
+  }
 }

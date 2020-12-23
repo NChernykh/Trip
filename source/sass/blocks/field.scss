@@ -1,6 +1,7 @@
 .field__phone {
   position: relative;
-  &:before {
+
+  &::before {
     position: absolute;
     content: "*";
     top: 6px;
@@ -9,14 +10,14 @@
   }
 }
 
-.field--phone .field__input {
-  padding-left: 30px;
+.field__phone .field__input {
+  padding-left: 27px;
 }
 
 .field__input {
   width: 100%;
-  padding: 15px;
-  padding-left: 30px;
+  padding: 16px;
+  padding-left: 18px;
   font-family: inherit;
   color: $darkgrey;
   border: 1px solid fade-out($lightgrey, 0.7);

@@ -19,10 +19,11 @@
     display: grid;
     grid-template-columns: minmax(395px, 50%) auto;
     grid-template-rows: auto;
-    row-gap: 30px;
+    row-gap: 18px;
   }
 
   @media (max-width: $mobile-width) {
+    margin: 0 16px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -31,13 +32,12 @@
 
 .footer__block {
   position: relative;
-  flex: 1 1 390px;
   border-right: 1px solid #d7d9df;
 
   @media (max-width: $mobile-width) {
     width: 100%;
     flex: 1 1 auto;
-    padding-bottom: 20px;
+    padding-bottom: 8px;
     border-right: none;
     border-bottom: 1px solid #d7d9df;
     text-align: center;
@@ -60,7 +60,7 @@
 
 .footer__block-title {
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 21px;
   font-weight: 600;
   font-size: 18px;
   line-height: 32px;

@@ -1,9 +1,22 @@
+.places {
+  padding-left: 13px;
+  padding-right: 38px;
+
+  @media (max-width: $tablet-width) {
+    padding-left: 0;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-right: 0;
+  }
+}
+
 .places__content {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 
-  @media (max-width: $tablet-width) {
+  @media (max-width: $mobile-width) {
     justify-content: center;
   }
 }
@@ -11,13 +24,17 @@
 .places__box {
   display: flex;
   flex-direction: column;
-  flex: 0 1 95px;
-  margin-right: 30px;
+  width: fit-content;
+  margin-right: 51px;
+
+  @media (max-width: $tablet-width) {
+    margin-right: 48px;
+  }
 
   @media (max-width: $mobile-width) {
-    flex: 0 1 139px;
+    margin-bottom: 10px;
     margin-right: 0;
-    margin-bottom: 20px;
+    width: 50%;
   }
 }
 

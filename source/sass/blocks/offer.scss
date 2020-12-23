@@ -1,5 +1,5 @@
 .offer {
-  padding-left: 50px;
+  padding-left: 47px;
 
   @media (max-width: $tablet-width) {
     padding-left: 0;
@@ -16,14 +16,14 @@
 }
 
 .offer__text {
-  width: 300px;
+  width: 320px;
   font-size: 14px;
   line-height: 24px;
   color: fade-out($darkgrey, 0.5);
 
   @media (max-width: $tablet-width) {
     margin: 0 auto;
-    width: 95%;
+    width: 100%;
   }
 }
 

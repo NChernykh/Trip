@@ -1,8 +1,12 @@
 .feedback {
-  margin-bottom: 170px;
+  margin-bottom: 168px;
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 51px;
+  }
 
   @media (max-width: $mobile-width) {
-    margin-bottom: 70px;
+    margin-bottom: 38px;
   }
 }
 
@@ -18,6 +22,7 @@
 
   @media (max-width: $tablet-width) {
     background-size: cover;
+    padding-bottom: 73px;
   }
 
   @media (max-width: $mobile-width) {

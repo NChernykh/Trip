@@ -1,5 +1,6 @@
 .products-catalog {
   padding-top: 200px;
+  margin-bottom: 90px;
 
   @media (max-width: $tablet-width) {
     padding-top: 80px;
@@ -7,6 +8,7 @@
 
   @media (max-width: $mobile-width) {
     padding-top: 0;
+    margin-bottom: 30px;
   }
 }
 
@@ -33,13 +35,13 @@
   margin-bottom: 64px;
 
   &::after {
-    bottom: -30px;
+    bottom: -33px;
     width: 228px;
     height: 4px;
   }
 
   @media (max-width: $tablet-width) {
-    margin-bottom: 20px;
+    margin-bottom: 22px;
   }
 }
 
@@ -47,7 +49,7 @@
   margin: 0;
   margin-bottom: 56px;
   font-weight: normal;
-  font-size: 16px;
+  font-size: 15px;
   line-height: 28px;
   color: fade-out($lightgrey, 0.3);
 
