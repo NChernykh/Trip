@@ -64,3 +64,39 @@ window.addEventListener('keydown', function (evt) {
     }
   }
 });
+
+// Tabs
+
+const tabs = document.querySelectorAll('.products__link');
+const tabsContent = document.querySelectorAll('.product');
+const tabsParent = document.querySelector('.products');
+
+function hideTabContent() {
+  tabsContent.forEach(item => {
+    item.classList.remove('product--current');
+  });
+
+  tabs.forEach(item => {
+    item.classList.remove('products__link--current');
+  });
+}
+
+function showTabContent(i = 0) {
+  tabsContent[i].classList.add('product--current');
+  tabs[i].classList.add('products__link--current');
+}
+
+hideTabContent();
+showTabContent();
+
+tabsParent.addEventListener('click', (event) => {
+  const target = event.target;
+  if (target && target.classList.contains('products__link')) {
+    tabs.forEach((item, i) => {
+      if (target === item) {
+        hideTabContent();
+        showTabContent(i);
+      }
+    });
+  }
+});
